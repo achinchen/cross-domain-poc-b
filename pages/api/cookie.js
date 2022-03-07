@@ -19,7 +19,6 @@ const DEFAULT_ALLOW_HEADERS = [
 const DEFAULT_MAX_AGE_SECONDS = 60 * 60 * 24 // 24 hours
 const MAX_AGE_FOR_COOKIE = 60 * 30 // 30 mins
 
-
 const setHeaderForPreflight = (request, response) => {
   const preflight = request.method === 'OPTIONS'
   if (preflight) {
@@ -33,7 +32,6 @@ const setHeaderForCORSWithCredentials = (response) => {
   response.setHeader('Access-Control-Allow-Origin', 'https://sitea.achin.dev')
   response.setHeader('Access-Control-Allow-Credentials', 'true')
 }
-
 
 export default function handler(request, response) {
   setHeaderForPreflight(request, response)

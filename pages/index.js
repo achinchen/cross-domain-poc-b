@@ -7,6 +7,7 @@ const getDeliciousCookie = () => Cookies.get('delicious')
 
 const SITE_A = 'https://sitea.achin.dev'
 const ENDPOINT = `${SITE_A}/api/cookie`
+const REDIRECT_POINT = `${SITE_A}/api/redirect`
 
 export default function Home() {
   const [isFetched, setIsFetched] = useState(false)
@@ -16,15 +17,7 @@ export default function Home() {
   const fetchToGetCookie = async () => {
     setIsLoading(true)
     try {
-      await fetch(ENDPOINT, {
-        mode: 'cors', 
-        credentials: 'include'
-      })
-      setIsFetched(true)
-      setIsLoading(false)
-      setTimeout(() => {
-        window.location = SITE_A
-      }, 10)
+      window.location = REDIRECT_POINT
     } catch(error) {
       console.log(error)
     }
