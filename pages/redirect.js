@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { getDeliciousCookie } from '../utils'
-import { SITE_A, REDIRECT_POINT } from '../constants'
+import { REDIRECT_POINT } from '../constants'
 
 export default function Redirect() {
   const [isLoading, setIsLoading] = useState(false)

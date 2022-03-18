@@ -2,10 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import { getDeliciousCookie } from '../utils'
-import { SITE_A,ENDPOINT } from '../constants'
-
-const SITE_A = 'https://sitea.achin.dev'
-const ENDPOINT = `${SITE_A}/api/cookie`
+import { ENDPOINT } from '../constants'
 
 export default function Home() {
   const [isFetched, setIsFetched] = useState(false)
